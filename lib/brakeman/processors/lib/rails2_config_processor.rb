@@ -39,7 +39,7 @@ class Brakeman::Rails2ConfigProcessor < Brakeman::BasicProcessor
     target = process target if sexp? target
 
     if exp.method == :gem and exp.first_arg.value == "erubis"
-      Brakeman.notify "[Notice] Using Erubis for ERB templates"
+      Brakeman.notice "Using Erubis for ERB templates"
       @tracker.config.erubis = true
     end
 
