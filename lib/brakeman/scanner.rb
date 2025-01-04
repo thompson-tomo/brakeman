@@ -60,7 +60,7 @@ class Brakeman::Scanner
 
   def process_step_file description
     if @per_file_timing
-      Brakeman.notify "Processing #{description}"
+      Brakeman.notify 'Processing', description
 
       start_t = Time.now
       yield
